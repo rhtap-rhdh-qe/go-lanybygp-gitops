@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-lanybygp
+  janus-idp.io/tekton: go-lanybygp
+  backstage.io/kubernetes-id: go-lanybygp
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-lanybygp
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
